@@ -19,20 +19,18 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
       return console.log(contactsList);
 
     case "get":
-        const oneContact = await contacts.getContactById(id);
-        return console.log(oneContact);
-      
-      case "add":
-        const newContact = await contacts.addContact(name, email, phone);
-        return console.log(newContact);
-  
-      case "remove":
-        const removeContact = await contacts.removeContact(id);
-        return console.log(removeContact);
-    }
-  
-    
-    }
+      const oneContact = await contacts.getContactById(id);
+      return console.log(oneContact);
+
+    case "add":
+      const newContact = await contacts.addContact(name, email, phone);
+      return console.log(newContact);
+
+    case "remove":
+      const removeContact = await contacts.removeContact(id);
+      return console.log(removeContact);
+  }
+};
   
   
   invokeAction(argv);
